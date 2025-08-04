@@ -15,6 +15,12 @@ function! lightline#tab#filename(n) abort
   return _ !=# '' ? _ : '[No Name]'
 endfunction
 
+function! lightline#tab#bufnum(n) abort
+  let buflist = tabpagebuflist(a:n)
+  let winnr = tabpagewinnr(a:n)
+  return '#' . buflist[winnr - 1]
+endfunction
+
 function! lightline#tab#modified(n) abort
   let winnr = tabpagewinnr(a:n)
   return gettabwinvar(a:n, winnr, '&modified') ? '+' : gettabwinvar(a:n, winnr, '&modifiable') ? '' : '-'

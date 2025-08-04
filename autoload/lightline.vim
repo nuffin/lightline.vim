@@ -131,6 +131,7 @@ let s:_lightline = {
       \   'tab_component': {},
       \   'tab_component_function': {
       \     'filename': 'lightline#tab#filename', 'modified': 'lightline#tab#modified',
+      \     'bufnum': 'lightline#tab#bufnum',
       \     'readonly': 'lightline#tab#readonly', 'tabnum': 'lightline#tab#tabnum'
       \   },
       \   'colorscheme': 'default',
